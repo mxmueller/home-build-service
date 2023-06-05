@@ -49,7 +49,6 @@ function App() {
           <h1>Test</h1>
           <h1>Test</h1>
           <h1>Test</h1>
-          <h1>Test</h1>
           <AnimationOnScrollText text="Hallo Welt!" />
           <h1>Test</h1>
           <h1>Test</h1>
