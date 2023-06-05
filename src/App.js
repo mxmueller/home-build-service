@@ -1,22 +1,75 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+
+// ! COMPONENTS 
+import AnimationScroll from './components/AnimationScroll';
+import AnimationOnScrollText from './components/AnimationOnScrollText';
+import MainForm from './components/MainForm';
+import Opener from './components/Opener';
 
 function App() {
   return (
     <div className="App">
+
+      <AnimationScroll></AnimationScroll>
+
+      <main className='w-fullscreen'>
+        <div className='w-content-tube'>
+          <div className='w-inner-content-tube'>
+
+          <Opener></Opener>
+
+          </div>
+        </div>
+      </main>
+
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+          
+          
+
+          <AnimationOnScrollText text="Hallo" />
+          <AnimationOnScrollText text="Michael" />
+          <AnimationOnScrollText text="Müller" />
+          <h1>Test</h1>
+          <h1>Test</h1>
+          <h1>Test</h1>
+          <h1>Test</h1>
+          <h1>Test</h1>
+          <h1>Test</h1>
+          <h1>Test</h1>
+          <h1>Test</h1>
+          <h1>Test</h1>
+          <h1>Test</h1>
+          <h1>Test</h1>
+          <h1>Test</h1>
+          <h1>Test</h1>
+          <h1>Test</h1>
+          <MainForm />
+          <h1>Test</h1>
+          <h1>Test</h1>
+          <h1>Test</h1>
+          <h1>Test</h1>
+          <h1>Test</h1>
+          <h1>Test</h1>
+          <h1>Test</h1>
+          <AnimationOnScrollText text="Hallo Welt!" />
+          <h1>Test</h1>
+          <h1>Test</h1>
+          <h1>Test</h1>
+          <h1>Test</h1>
+          <h1>Test</h1>
+          <h1>Test</h1>
+          <h1>Test</h1>
+          <h1>Test</h1>
+          <h1>Test</h1>
+          <h1>Test</h1>
+          <h1>Test</h1>
+          <h1>Test</h1>
+          <h1>Test</h1>
+          <h1>Test</h1>
+          <h1>Test</h1>
+          <h1>Test</h1>
+          <h1>Test</h1>
+          <h1>Test</h1>
       </header>
     </div>
   );

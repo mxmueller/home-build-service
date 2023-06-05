@@ -1,0 +1,217 @@
+body {
+    --black: #111111;
+    --white: #fdfdfd;
+    --green: #22cc88;
+    --blue: #0055ff;
+    --purple: #8855ff;
+    --red: #ff0055;
+    --orange: #ee4444;
+    --yellow: #ffcc00;
+    --mustard: #ffaa00;
+    --background: var(--white);
+    --accent: var(--black);
+}
+
+$base-inner-margin-h: 50px;
+$base-inner-margin-v: 25px;
+
+$font-family-secondary: monospace;
+$font-family-secondary-sizing: 1.5vw;
+
+$c-primary: #111111;
+$c-secondary: #FFA800;
+
+.w-fullscreen {
+    background-color: red;
+    width: 100vw !important;
+    margin: 0 auto;
+    position: relative;
+
+    .w-content-tube {
+        background-color: #ffaa00;
+        width: 100%;
+        margin: 0 auto;
+        max-width: 1600px;
+        position: relative;
+
+        .w-inner-content-tube {
+            background-color: var(--green);
+            width: auto;
+            margin: 0 $base-inner-margin-h;
+            position: relative;
+        }
+    }
+}
+// ! TEMPLATES
+
+.Opener {
+    height: 100vh;
+    margin: $base-inner-margin-v auto $base-inner-margin-v auto;
+    display: inline-block;
+    width: 100%;
+
+    .Menu-layer {
+        width: 100%;
+        overflow: auto;
+        position: relative;
+
+        img.logo-desktop {
+            float: left;
+            height: 16vh;
+        }
+
+        menu {
+            float: right;
+            position: absolute;
+            right: 0;
+            height: 100%;
+
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            -webkit-box-align: center;
+            align-items: center;
+
+            margin: 0;
+            list-style: none;
+            text-transform: uppercase;
+
+            li {
+                margin-left: 3vw;
+                float: left;
+                font-family: $font-family-secondary;
+                font-size: $font-family-secondary-sizing;
+            }
+        }
+    }
+
+    .Impression-layer {
+        height: 100%;
+        width: 100%;
+        background-color: #61dafb;
+        margin-top: 5%;
+        height: calc(95% - 16vh - (2 * $base-inner-margin-v));
+        display: flex;
+
+        &>div:first-of-type {
+          z-index: 1;
+        } 
+
+        &>* {
+            width: 50%;
+
+            .Impression-image {
+                position: relative;
+
+                img {
+                    width: 100%;
+                }
+
+                .Overlay {
+                  position: absolute;
+                  top: 0;
+                  width: 100%;
+                  height: 100%;
+                  background: $c-secondary;
+                  opacity: 0.25;
+                }
+            }
+
+            .Impression-headline {
+                position: absolute;
+                width: 60% !important;
+                float: left;
+                text-align: left;
+                font-size: 5vh;
+
+                h1 {
+                    margin: 0 0 5px 0;
+                    border-bottom: solid 5px $c-secondary;
+                    text-transform: uppercase;
+                }
+
+                p {
+                    margin: 5px 0 0 0;
+                    font-family: $font-family-secondary;
+                    font-size: 25px;
+                }
+            }
+        }
+    }
+
+    .Arrow-group {
+      position: absolute;
+      bottom: 10%;
+      width: 80px;
+
+      .arrow {
+        border: solid $c-secondary;
+        border-width: 0 5px 5px 0;
+        display: inline-block;
+        padding: 20px;
+        position: relative;
+        margin-top: -20px;
+      }
+      .down {
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+      }
+    }
+}
+
+
+
+
+
+.App {
+    text-align: center;
+}
+
+.App-logo {
+    height: 40vmin;
+    pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
+}
+
+.App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+.App-link {
+    color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 10px;
+    background: var(--red);
+    transform-origin: 0%;
+}
