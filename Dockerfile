@@ -1,25 +1,7 @@
-# Verwende ein Node.js-Base-Image
-# FROM node:14
+FROM nginx:latest
 
-# Setze das Arbeitsverzeichnis im Container
-# WORKDIR /usr/src/app
+RUN apt-get update && apt-get install -y git
 
-# Installiere Abhängigkeiten für das Backend
-# COPY backend/package*.json ./backend/
-# RUN cd backend && npm install
+WORKDIR /usr/share/nginx/html
 
-# Installiere Abhängigkeiten für das Frontend
-# COPY frontend/package*.json ./frontend/
-# RUN cd frontend && npm install
-
-# Kopiere den Quellcode in das Arbeitsverzeichnis
-# COPY . .
-
-
-# Baue das Frontend
-# RUN cd frontend && npm run build
-
-# Starte die App
-# CMD ["npm", "start"]
-
-#
+RUN git clone https://github.com/mxmueller/home-build-service.git .
