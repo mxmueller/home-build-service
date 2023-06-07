@@ -6,7 +6,8 @@ services:
     ports:
       - "2000:80"
     volumes:
-      - ./mein-webverzeichnis:/usr/share/nginx/html
+      - mein-webverzeichnis:/usr/share/nginx/html
 
 volumes:
   mein-webverzeichnis:
+    driver: local
