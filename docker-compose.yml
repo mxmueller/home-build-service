@@ -6,8 +6,8 @@ services:
     ports:
       - 1000:80
     volumes:
-      - git:/app/data
-    command: mkdir -p /app/data
+      - git:/usr/share/nginx/html
+    command: mkdir -p /usr/share/nginx/html
     build:
       context: .
       dockerfile: Dockerfile
