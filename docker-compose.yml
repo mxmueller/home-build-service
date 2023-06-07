@@ -5,9 +5,10 @@ services:
     image: nginx:latest
     ports:
       - 1000:80
-   volumes:
-    - nginx:/app/data
-   command: mkdir -p /app/data
-   build:
-    context: .
-    dockerfile: Dockerfile
+    volumes:
+      - nginx:/app/data
+    command: mkdir -p /app/data
+    build:
+      context: .
+      dockerfile: Dockerfile
+
