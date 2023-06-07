@@ -6,7 +6,7 @@ services:
     ports:
       - 1000:80
     volumes:
-      - git:/usr/share/nginx/html
+      - git_data:/usr/share/nginx/html
     command: mkdir -p /usr/share/nginx/html
     build:
       context: .
