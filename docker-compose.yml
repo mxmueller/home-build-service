@@ -12,3 +12,5 @@ services:
       context: .
       dockerfile: Dockerfile
 
+volumes:
+  nginx:
