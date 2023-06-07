@@ -7,8 +7,12 @@ services:
       - "2000:80"
     volumes:
       - nginx_data:/usr/share/nginx/html
-      - /var/lib/docker/volumes/portainer_data/_data/compose/23/frontend:/usr/share/nginx/html # PFAD ggf. Anpassen wenn etwas nicht funktioniert! 
 
 volumes:
   nginx_data:
     driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: /var/lib/docker/volumes/portainer_data/_data/compose/23/frontend:/usr/share/nginx/html # PFAD ggf. Anpassen wenn etwas nicht funktioniert! 
+
