@@ -2,13 +2,13 @@ version: '3'
 
 services:
   frontend-prod:
-    image: nginx
+    image: node:latest
+    ports: "3245:80"
     volumes:
-      - source_data:/usr/share/nginx/html
+      - node:/_data
     build:
       context: .
       dockerfile: Dockerfile
 
 volumes:
-  source_data:
-    external: true
+  node:
