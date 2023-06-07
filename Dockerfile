@@ -2,7 +2,7 @@
 FROM node:14
 
 # Setze das Arbeitsverzeichnis im Container
-WORKDIR /usr/src/app
+WORKDIR /usr/src/app/frontend
 
 # Installiere Abhängigkeiten
 COPY package*.json ./
