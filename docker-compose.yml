@@ -6,13 +6,7 @@ services:
     ports:
       - "2000:80"
     volumes:
-      - nginx_data:/usr/share/nginx/html
-
+      - data:/usr/share/nginx/html
+      
 volumes:
-  nginx_data:
-    driver: local
-    driver_opts:
-      type: none
-      o: bind
-      device: /var/lib/docker/volumes/portainer_data/_data/compose/23/frontend # PFAD ggf. Anpassen wenn etwas nicht funktioniert! 
-
+  data:
