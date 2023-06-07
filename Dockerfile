@@ -15,6 +15,7 @@
 # Kopiere den Quellcode in das Arbeitsverzeichnis
 # COPY . .
 
+
 # Baue das Frontend
 # RUN cd frontend && npm run build
 
