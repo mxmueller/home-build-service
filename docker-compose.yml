@@ -7,4 +7,4 @@ services:
     ports:
       - 3000:3000
     volumes:
-      - ./app:/usr/share/nginx/html
+      - ./portainer_data:/usr/share/nginx/html
