@@ -5,6 +5,9 @@ services:
     image: nginx:latest
     ports:
       - "2000:80"
+    build:
+      context: .
+      dockerfile: Dockerfile
     volumes:
       - data:/usr/share/nginx/html
       
