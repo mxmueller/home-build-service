@@ -7,6 +7,4 @@ services:
     ports:
       - 3000:3000
     volumes:
-      - ./app:/usr/src/app
-    environment:
-      - NODE_ENV=development
+      - ./portainer_data:/usr/share/nginx/html
