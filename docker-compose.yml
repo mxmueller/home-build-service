@@ -1,13 +1,14 @@
 version: '3.8'
 
 services:
-  webserver:
+  nginx:
     image: nginx:latest
     ports:
       - "2000:80"
     volumes:
-      - mein-webverzeichnis:/usr/share/nginx/html
+      - nginx_data:/usr/share/nginx/html
+      - /var/lib/docker/volumes/portainer_data/_data/compose/23/frontend:/usr/share/nginx/html # PFAD ggf. Anpassen wenn etwas nicht funktioniert! 
 
 volumes:
-  mein-webverzeichnis:
+  nginx_data:
     driver: local
