@@ -1,13 +1,12 @@
-version: '3'
+version: '3.8'
+
 services:
-  frontend-prod:
-    image: 'node:latest'
-    ports: 
-      - '3245:80'
+  webserver:
+    image: nginx:latest
+    ports:
+      - "2000:80"
     volumes:
-      - 'node:/_data'
-    build:
-      context: .
-      dockerfile: Dockerfile
+      - ./mein-webverzeichnis:/usr/share/nginx/html
+
 volumes:
-  node: null
+  mein-webverzeichnis:
