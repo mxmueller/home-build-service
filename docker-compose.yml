@@ -1,14 +1,12 @@
 version: '3'
-
 services:
   frontend-prod:
-    image: node:latest
-    ports: "3245:80"
+    image: 'node:latest'
+    ports: '3245:80'
     volumes:
-      - node:/_data
+      - 'node:/_data'
     build:
       context: .
       dockerfile: Dockerfile
-
 volumes:
-  node:
+  node: null
