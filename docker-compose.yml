@@ -1,16 +1,14 @@
 version: '3'
 
 services:
-  nginx:
-    image: nginx:latest
-    ports:
-      - 1000:80
+  frontend-prod:
+    image: nginx
     volumes:
-      - git_data:/usr/share/nginx/html
-    command: mkdir -p /usr/share/nginx/html
+      - source_data:/frontend-prod
     build:
       context: .
       dockerfile: Dockerfile
 
 volumes:
-  git_data:
+  source_data:
+    external: true
