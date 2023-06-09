@@ -4,6 +4,6 @@ WORKDIR /usr/share/nginx/html
 
 RUN rm -rf ./*
 
-RUN git clone -b branchname --depth 1 https://github.com/username/repository.git .
+RUN git clone -b master --depth 1 https://github.com/mxmueller/home-build-service.git .
 
 CMD ["true"]
