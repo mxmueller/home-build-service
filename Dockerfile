@@ -1,7 +1,9 @@
-FROM nginx:latest
-
-RUN apt-get update && apt-get install -y git
+FROM alpine/git
 
 WORKDIR /usr/share/nginx/html
 
-RUN git clone https://github.com/mxmueller/home-build-service.git .
+RUN rm -rf ./*
+
+RUN git clone -b branchname --depth 1 https://github.com/username/repository.git .
+
+CMD ["true"]
