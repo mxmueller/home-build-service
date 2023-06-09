@@ -1,15 +1,20 @@
-version: '3.8'
-
+version: '3'
 services:
-  nginx:
-    image: nginx:latest
-    ports:
-      - "2000:80"
+  git-clone:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.git
     volumes:
-      - data:/usr/share/nginx/html
-      
+      - nginx-data:/usr/share/nginx/html
+    depends_on:
+      - nginx
+
+  nginx:
+    image: nginx
+    ports:
+      - 1000:80
+    volumes:
+      - nginx-data:/usr/share/nginx/html
+
 volumes:
-  data:
+  nginx-data:
