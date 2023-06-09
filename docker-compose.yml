@@ -3,7 +3,7 @@ services:
   git-clone:
     build:
       context: .
-      dockerfile: Dockerfile.git
+      dockerfile: Dockerfile
     volumes:
       - nginx-data:/usr/share/nginx/html
     depends_on:
