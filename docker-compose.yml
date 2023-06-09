@@ -1,20 +1,18 @@
 version: '3'
+
 services:
   git-clone:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: alpine/git
     volumes:
-      - nginx-data:/usr/share/nginx/html
-    depends_on:
-      - nginx
-
-  nginx:
-    image: nginx
-    ports:
-      - 1000:80
-    volumes:
-      - nginx-data:/usr/share/nginx/html
+      - my-volume:/app
+    entrypoint: ["/bin/sh", "-c"]
+    command: |
+      "if [ -d /app ]; then
+        rm -rf /app/*
+      fi &&
+      apk update &&
+      apk add --no-cache git &&
+      git clone https://github.com/mxmueller/home-build-service.git /app"
 
 volumes:
-  nginx-data:
+  my-volume:
