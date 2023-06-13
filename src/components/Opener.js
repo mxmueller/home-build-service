@@ -1,63 +1,78 @@
-import logo from '../logo.png'; 
 import React, { useEffect, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import Typed from 'react-typed'; 
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const Opener = () => {
-  const [isVisible, setIsVisible] = useState(false);
+  const [ref, inView] = useInView();
+  const variants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
+  };
 
-  useEffect(() => {
-    // Überprüfe, ob die Pfeile im Sichtfeld sind
-    const handleScroll = () => {
-      const arrowsGroup = document.querySelector(".Arrow-group");
-      const arrowsRect = arrowsGroup.getBoundingClientRect();
-      const isArrowGroupVisible = arrowsRect.top < window.innerHeight;
+  return (
+    <motion.div
+      ref={ref}
+      initial="hidden"
+      animate={inView ? "visible" : "hidden"}
+      variants={variants}
+      transition={{ duration: 0.8 }}
+      className="Opener"
+    >
+      <div className="Impression-layer">
+        <div>
+          <div className="Impression-headline">
+            <h1 className='teko-display'>Handwerk mit Leidenschaft, aus einer Hand.</h1>
+            <p className='popp-text'>
+              <Typed
+                  strings={['Die handwerkliche Tätigkeit, die von der industriellen Massenproduktion abzugrenzen ist. Ihre zuverlässigen Partner für professionelle Handwerksarbeiten.']}
+                  typeSpeed={30}
+              />
+            </p>
+          </div>
+        </div>
 
-      setIsVisible(isArrowGroupVisible);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    handleScroll(); // Überprüfe beim Laden der Seite
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-   return (
-      <div className='Opener'>
-         <div className='Menu-layer'>
-            <img src={logo} alt="Logo" title="Logo" className="logo-desktop" />
-            <menu>
-               <li>Home</li>
-               <li>Wir</li>
-               <li>Projekte</li>
-               <li>Kontakt</li>
-            </menu>
-         </div>
-
-         <div className='Impression-layer'>
-            <div>
-               <div className='Impression-headline'>
-                  <h1>Test das ist eine Überschrift die Umbricht tada</h1>
-                  <p>Die handwerkliche Tätigkeit, die von der industriellen Massenproduktion abzugrenzen ist.</p>
-               </div>
-            </div>
-
-            <div>
-                  <div className='Impression-image'>
-                  <img src='http://placekitten.com/g/800/500'></img>         
-                     <div className='Overlay' />
-                  </div>
-            </div>
-         </div>
-
-         <div className='Arrow-group'>
-            <i class="arrow down" />
-            <i class="arrow down" />
-            <i class="arrow down" />
-         </div>
-
+        <div>
+          <div className="Impression-image">
+            <img src="http://placekitten.com/g/800/500" alt="Impression" />
+            <div className="Overlay" />
+          </div>
+        </div>
       </div>
-   )
-}
-export default Opener
+
+      <div className="Arrow-group">
+        <div className="arrow-frame">
+          <motion.i
+            className="arrow"
+            whileHover={{ scale: 1.1 }}
+            animate={{ scale: [1, 1.2, 1] }}
+            transition={{ duration: 1, repeat: Infinity, delay: 1.0 }}
+            style={{ transform: "rotate(20deg)" }}
+          />
+        </div>
+
+        <div className="arrow-frame">
+          <motion.i
+            className="arrow"
+            whileHover={{ scale: 1.1 }}
+            animate={{ scale: [1, 1.2, 1] }}
+            transition={{ duration: 1, repeat: Infinity, delay: 1.2 }}
+            style={{ transform: "rotate(20deg)" }}
+          />
+        </div>
+
+        <div className="arrow-frame">
+          <motion.i
+            className="arrow"
+            whileHover={{ scale: 1.1 }}
+            animate={{ scale: [1, 1.2, 1] }}
+            transition={{ duration: 1, repeat: Infinity, delay: 1.4 }}
+            style={{ transform: "rotate(20deg)" }}
+          />
+        </div>
+      </div>
+    </motion.div>
+  );
+};
+
+export default Opener;
