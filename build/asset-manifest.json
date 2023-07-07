@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/static/css/main.6ff6e2d0.css",
+    "main.js": "/static/js/main.3ba79f75.js",
+    "static/js/787.7af99b94.chunk.js": "/static/js/787.7af99b94.chunk.js",
+    "static/media/02.jpeg": "/static/media/02.c8d9542ba9e4cbde2359.jpeg",
+    "static/media/03.jpeg": "/static/media/03.5f6540cfc68ce7dc6d89.jpeg",
+    "static/media/01.jpeg": "/static/media/01.f97f08d54d98da5a3a4b.jpeg",
+    "static/media/Teko-Regular.ttf": "/static/media/Teko-Regular.3419209fb7c5d9f70ce3.ttf",
+    "static/media/Teko-Medium.ttf": "/static/media/Teko-Medium.c810f95c127da691d308.ttf",
+    "static/media/Teko-Bold.ttf": "/static/media/Teko-Bold.548f8c0920e1990b79fc.ttf",
+    "static/media/Teko-Light.ttf": "/static/media/Teko-Light.7e9da4aa6dd421f07584.ttf",
+    "static/media/Poppins-Light.ttf": "/static/media/Poppins-Light.7641a0f76ca9ef6c252c.ttf",
+    "static/media/Poppins-Regular.ttf": "/static/media/Poppins-Regular.35d26b781dc5fda684cc.ttf",
+    "static/media/Poppins-Medium.ttf": "/static/media/Poppins-Medium.673ed42382ab264e0bf5.ttf",
+    "static/media/Poppins-Bold.ttf": "/static/media/Poppins-Bold.cdb29a5d7ccf57ff05a3.ttf",
+    "static/media/8_Transparent_Image_small.png": "/static/media/8_Transparent_Image_small.e64f9245a8be70fae000.png",
+    "index.html": "/index.html",
+    "main.6ff6e2d0.css.map": "/static/css/main.6ff6e2d0.css.map",
+    "main.3ba79f75.js.map": "/static/js/main.3ba79f75.js.map",
+    "787.7af99b94.chunk.js.map": "/static/js/787.7af99b94.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6ff6e2d0.css",
+    "static/js/main.3ba79f75.js"
+  ]
+}
