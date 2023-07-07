@@ -1,0 +1,86 @@
+@font-face {
+font-family: "PoppinsBold";
+src: local("PoppinsBold"),
+    url("./Poppins/Poppins-Bold.ttf") format("truetype");
+font-weight: bold;
+}
+
+.font-poppins-bold {
+font-family: "PoppinsBold";
+}
+
+@font-face {
+    font-family: "PoppinsMedium";
+    src: local("PoppinsMedium"),
+    url("./Poppins/Poppins-Medium.ttf") format("truetype");
+    font-weight: medium;
+}
+
+.font-poppins-medium {
+    font-family: "PoppinsMedium";
+}
+
+@font-face {
+    font-family: "PoppinsRegular";
+    src: local("PoppinsRegular"),
+    url("./Poppins/Poppins-Regular.ttf") format("truetype");
+    font-weight: normal;
+}
+
+.font-poppins {
+    font-family: "PoppinsRegular";
+}
+
+@font-face {
+    font-family: "PoppinsLight";
+    src: local("PoppinsLight"),
+    url("./Poppins/Poppins-Light.ttf") format("truetype");
+    font-weight: light;
+}
+
+.font-poppins-light {
+    font-family: "PoppinsLight";
+}
+
+@font-face {
+    font-family: "TekoRegular";
+    src: local("TekoRegular"),
+    url("./Teko/Teko-Regular.ttf") format("truetype");
+    font-weight: normal;
+}
+
+.font-teko {
+    font-family: "TekoRegular";
+}
+@font-face {
+    font-family: "TekoMedium";
+    src: local("TekoMedium"),
+    url("./Teko/Teko-Medium.ttf") format("truetype");
+    font-weight: normal;
+}
+
+.font-teko-medium {
+    font-family: "TekoMedium";
+}
+
+@font-face {
+    font-family: "TekoLight";
+    src: local("TekoLight"),
+    url("./Teko/Teko-Light.ttf") format("truetype");
+    font-weight: Light;
+}
+
+.font-teko-light {
+    font-family: "TekoLight";
+}
+
+@font-face {
+    font-family: "TekoBold";
+    src: local("TekoBold"),
+    url("./Teko/Teko-Bold.ttf") format("truetype");
+    font-weight: Bold;
+}
+
+.font-teko-bold {
+    font-family: "TekoBold";
+}
