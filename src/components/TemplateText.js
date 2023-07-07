@@ -1,16 +1,18 @@
-
 import React from "react";
+import ContentHeadline from './ingredients/ContentHeadline';
+import Bounce from 'react-reveal/Bounce';
 
 const TemplateText = ({ headline, text, theme }) => {
 
     const isOrangeTheme = theme === "orange";
 
     return (
-        <div className={`template-text px-3 py-4 bgc-light ${isOrangeTheme ? "bgc-primary" : ""}`}>
+        <div className={`template-text px-3 py-5 bgc-light ${isOrangeTheme ? "bgc-primary" : ""}`}>
             <div className="container">
-                <h1 className="text-left font-teko display-2">{headline}</h1>
-                <hr></hr>
-                <p className="text-left m-0 font-poppins">{text}</p>
+                <ContentHeadline headline={headline} theme={theme}></ContentHeadline>
+                <Bounce left>
+                    <p className="text-left m-0 mt-5 font-poppins">{text}</p>
+                </Bounce>
             </div>
         </div>
       );

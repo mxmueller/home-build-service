@@ -6,13 +6,18 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
 
+import ContentHeadline from './ingredients/ContentHeadline';
+import Fade from 'react-reveal/Fade';
+
 function TemplateFext() {
   return(
-   <div className="template-form px-3 py-4">
+   <div className="template-form px-3 py-5">
      <div className="container">
-        <h2 className="text-left font-teko display-2">Anfrage</h2>
         
-        <div class="row">
+        <ContentHeadline headline={"test"}></ContentHeadline>
+        
+        <div class="row mt-5">
+            <Fade left>
                 <Form className="font-poppins">       
                     <Row>   
                         <Form.Group as={Col} controlId="formGridEmail">
@@ -87,6 +92,7 @@ function TemplateFext() {
 
                     <Button className="mt-5 rounded-0" type="submit">Anfrage abschicken</Button>
                 </Form>
+            </Fade>
         </div>    
     </div>
    </div>

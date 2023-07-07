@@ -1,7 +1,28 @@
 $bgc-primary: #FFA800;
+$bgc-secondary: #603f23;
 $bgc-black: #0b0b0b;
 $bgc-light: #E3E3E3;
 
+// ! Overrides
+.form-control:focus, 
+.form-select:focus,
+.form-check-input:focus {
+    border-color: $bgc-secondary !important;
+    box-shadow: 0 0 0 0.25rem rgba($bgc-secondary, 0.25) !important;
+}
+
+.form-check-input:checked {
+    background-color: $bgc-secondary !important;
+    border-color: $bgc-secondary !important;
+}
+
+.form-switch .form-check-input:focus {
+    --bs-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%27-4 -4 8 8%27%3e%3ccircle r=%273%27 fill=%27%23603f23%27/%3e%3c/svg%3e") !important;
+}
+
+.form-switch .form-check-input:checked {
+    --bs-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%27-4 -4 8 8%27%3e%3ccircle r=%273%27 fill=%27%23fff%27/%3e%3c/svg%3e") !important;
+}
 
 $theme-colors: (
   "primary": #FFA800,
@@ -20,30 +41,62 @@ $theme-colors: (
     background-color: $bgc-primary;
 }
 
+.bgc-black {
+    background-color: $bgc-black;
+}
+
 // TEMPLATE TEXT
-.template-text {
-    hr {
-        border-top: 4px solid $bgc-primary;
-        opacity: 1;
-        width: 15vw;
-    }
-
-    @include media-breakpoint-up(sm) {
-        hr {
-          width: 10vw;
-        }
-    }
-
-    &.bgc-primary {
-        hr {
-            border-top: 4px solid $bgc-black;
-        }
-    }
-}   
+.template-text {}   
 
 // TEMPLATE FROM
 .template-form {
     .row {
         max-width: 1000px;
+    }
+}
+
+// CONTENT HEADLINE
+.content-headline {
+    h1, h2, h3, h4, h5, h6 {
+        line-height: 0.9 !important;
+    }
+
+    .animation {
+        width: 15vw;;
+        height: 4px;
+        background-color: $bgc-primary;
+        position: relative;
+        animation: hr 4s infinite;
+      }
+      
+      @keyframes hr {
+        0%,
+        100% {
+          left: -1%;
+        }
+      
+        50% {
+          left: 1%;
+        }
+    }
+
+    @include media-breakpoint-up(sm) {
+        .animation {
+          width: 10vw;
+        }
+    }
+
+    &.bgc-primary {
+        .animation {
+            background-color: $bgc-black;
+        }
+    }
+      
+}
+
+// TEMPLATE FOOTER
+.template-footer {
+    img {
+        max-width: 200px;
     }
 }
