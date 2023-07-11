@@ -1,10 +1,11 @@
-import React from 'react';
+import React from "react";
 
-function Slider() {
-  return(
-    <div className="container">
-    </div>
-  )
+
+const TemplateHeader = ({ }) => {
+
+    return (
+        <div className={`template-text`}>
+        </div>
+      );
 }
-
-export default Slider;
+export default TemplateHeader

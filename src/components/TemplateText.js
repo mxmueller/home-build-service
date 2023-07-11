@@ -11,7 +11,7 @@ const TemplateText = ({ headline, text, theme }) => {
             <div className="container">
                 <ContentHeadline headline={headline} theme={theme}></ContentHeadline>
                 <Bounce left>
-                    <p className="text-left m-0 mt-5 font-poppins">{text}</p>
+                    <p className="text-left m-0 mt-3 font-poppins">{text}</p>
                 </Bounce>
             </div>
         </div>

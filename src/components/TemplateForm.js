@@ -9,6 +9,7 @@ import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import ContentHeadline from './ingredients/ContentHeadline';
 import Fade from 'react-reveal/Fade';
 
+
 function TemplateFext() {
   return(
    <div className="template-form px-3 py-5">
@@ -16,7 +17,7 @@ function TemplateFext() {
         
         <ContentHeadline headline={"test"}></ContentHeadline>
         
-        <div class="row mt-5">
+        <div class="row mt-3">
             <Fade left>
                 <Form className="font-poppins">       
                     <Row>   

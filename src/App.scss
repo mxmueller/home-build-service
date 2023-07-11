@@ -45,6 +45,18 @@ $theme-colors: (
     background-color: $bgc-black;
 }
 
+.text-c-light {
+    color: $bgc-light;
+}
+
+.text-c-muted {
+    color: #ababab;
+}
+
+.text-c-dark {
+    color: #666666;
+}
+
 // TEMPLATE TEXT
 .template-text {}   
 
@@ -98,5 +110,54 @@ $theme-colors: (
 .template-footer {
     img {
         max-width: 200px;
+        filter: brightness(0.85);
     }
+}
+
+// TEMPLATE OPENER
+.template-opener {
+}
+
+// TEMPALTE HEADER 
+.template-header {
+    
+.burger {
+    display: flex;
+    outline: none;
+    height: 20px;
+    width: 15px;
+    border: 0px;
+    padding: 0px;
+    background: transparent;
+    transition: all 250ms ease-out;
+    cursor: pointer;
+  }
+  
+  .burger:before, .burger:after {
+    content: '';
+    width: 15px;
+    height: 2px;
+    position: absolute;
+    background: #1a1a1a;
+    transition: all 250ms ease-out;
+    will-change: transform;
+  }
+  
+  .burger:before {
+    transform: translateY(-3px);
+  }
+  
+  .burger:after {
+    transform: translateY(3px);
+  }
+  
+  // line transition
+  
+  .active.burger:before {
+    transform: translateY(0) rotate(45deg);
+  }
+  
+  .active.burger:after {
+    transform: translateY(0) rotate(-45deg);
+  }   
 }
